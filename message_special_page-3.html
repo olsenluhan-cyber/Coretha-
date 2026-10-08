@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quelques mots pour toi ❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Georgia,"Times New Roman",serif}
+body{
+  background:linear-gradient(135deg,#fff5f7,#f9eef3,#fffaf5);
+  color:#49383e;
+}
+.page{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  padding:28px 16px;position:relative;overflow:hidden;
+}
+.card{
+  width:min(760px,100%);background:rgba(255,255,255,.88);
+  border:1px solid #d9a8b4;border-radius:24px;padding:38px 34px;
+  box-shadow:0 20px 60px rgba(120,70,90,.15);position:relative;
+}
+.card:before{content:"";position:absolute;inset:10px;border:1px solid #ead0d7;border-radius:18px;pointer-events:none}
+h1{text-align:center;color:#a85d70;font-size:30px;margin:5px 0 8px}
+.subtitle{text-align:center;font-style:italic;color:#866b73;margin-bottom:28px}
+.message{line-height:1.65;font-size:16px}
+.message p{margin:0 0 14px}
+.heart{text-align:center;font-size:27px;color:#b86d7d;margin-top:20px}
+.reveal{
+  text-align:center;background:#a85d70;color:white;border:0;border-radius:999px;
+  padding:13px 25px;font-size:15px;cursor:pointer;box-shadow:0 8px 22px rgba(168,93,112,.25);
+}
+.intro{text-align:center;padding:50px 20px}
+.hidden{display:none}
+.fade{animation:fade .8s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.floating{position:absolute;opacity:.25;animation:float 7s ease-in-out infinite}
+.f1{left:8%;top:12%;font-size:28px}.f2{right:9%;bottom:13%;font-size:22px}.f3{right:15%;top:17%;font-size:18px}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+@media(max-width:560px){.card{padding:30px 22px}.message{font-size:15px}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="floating f1">♡</div><div class="floating f2">♡</div><div class="floating f3">✦</div>
+  <main class="card">
+    <section id="intro" class="intro">
+      <h1>À toi, qui es spéciale ❤️</h1>
+      <p class="subtitle">J'avais quelques mots que je voulais vraiment te dire.</p>
+      <button class="reveal" onclick="showMessage()">Ouvrir mon message</button>
+    </section>
+
+    <section id="message" class="message hidden fade">
+      <h1>Quelques mots pour toi</h1>
+      <p>Aujourd’hui, j’avais envie de prendre le temps de te dire certaines choses que je ne dis peut-être pas assez.</p>
+      <p>Tu es une personne spéciale pour moi, et pas simplement parce qu’aujourd’hui est ton anniversaire. Tu l’es par tout ce que tu représentes, par ta façon d’être, et surtout par la place que tu as réussi à prendre dans ma vie sans même forcément t’en rendre compte.</p>
+      <p>Je veux que tu saches que je te souhaite sincèrement tout ce qu’il y a de meilleur. Je te souhaite de connaître des moments qui te feront sourire sans raison, de rencontrer des personnes qui sauront reconnaître ta valeur, de réaliser tes projets, et surtout de ne jamais perdre cette partie de toi qui te rend unique.</p>
+      <p>Je ne sais pas ce que la vie nous réserve pour la suite, ni où elle nous emmènera chacun. Mais peu importe les années, les changements ou la distance, je serai toujours heureux d’avoir croisé ton chemin.</p>
+      <p>Et si parfois je ne le montre pas ou si je ne trouve pas toujours les bons mots, sache simplement que tu comptes beaucoup pour moi. Plus que je ne le dis probablement.</p>
+      <p>Alors aujourd’hui, je ne veux pas seulement te souhaiter une belle journée. Je veux te souhaiter une belle vie. Une vie remplie de bonheur, de réussites, de paix, de belles surprises et de personnes qui te feront te sentir aussi importante que tu l’es réellement.</p>
+      <p>Prends soin de toi, crois en toi, et n’oublie jamais la personne extraordinaire que tu es.</p>
+      <p>Profite de cette nouvelle année de ta vie. Et surtout, garde une petite place pour tous les beaux moments qui restent encore à venir. ❤️</p>
+      <div class="heart">♡</div>
+    </section>
+  </main>
+</div>
+<script>
+function showMessage(){
+  document.getElementById('intro').classList.add('hidden');
+  document.getElementById('message').classList.remove('hidden');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
